@@ -24,6 +24,7 @@ ll
 la
 pwd
 grep "test" file.txt
+
 Ingliz tilida (English)
 User Guide
 Saving the script:
