@@ -1,4 +1,4 @@
-# Creating-aliases-for-Linux-commands-on-Windows-
+# Creating 100 aliases-for-Linux-commands-on-Windows-
 O'zbek tilida
 Ishlatish bo'yicha qo'llanma
 Skriptni saqlash:
