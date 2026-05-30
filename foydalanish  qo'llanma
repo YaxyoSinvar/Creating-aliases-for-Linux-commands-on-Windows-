@@ -1,0 +1,64 @@
+#O'zbek tilida
+Ushbu skriptni PowerShell-da to'g'ridan-to'g'ri ishga tushirish mumkin. Biroq, bir nechta muhim qadamlarni bajarish kerak:
+
+PowerShell-da skriptni ishga tushirish bosqichlari:
+1. Skriptni yaratish va saqlash:
+
+powershell
+# Skript matnini faylga yozing
+$scriptContent = @'
+# (yuqoridagi to'liq skript matnini shu yerga qo'ying)
+'@
+
+# Faylni saqlash
+$scriptPath = "$env:USERPROFILE\Documents\Set-LinuxAliases.ps1"
+$scriptContent | Out-File -FilePath $scriptPath -Encoding UTF8
+2. ExecutionPolicy ni o'zgartirish:
+
+powershell
+# Joriy foydalanuvchi uchun execution policy ni o'zgartirish
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
+# Tekshirish
+Get-ExecutionPolicy -Scope CurrentUser
+3. Skriptni ishga tushirish:
+
+powershell
+# To'g'ridan-to'g'ri ishga tushirish
+& "$env:USERPROFILE\Documents\Set-LinuxAliases.ps1"
+
+# Yoki
+.\Documents\Set-LinuxAliases.ps1
+
+
+# Ingliz tilida (English)
+This script can be executed directly in PowerShell. However, several important steps must be performed:
+
+Steps to run a script in PowerShell:
+1. Create and save the script:
+
+powershell
+# Write the script content to a file
+$scriptContent = @'
+# (Place the full script text from above here)
+'@
+
+# Save the file
+$scriptPath = "$env:USERPROFILE\Documents\Set-LinuxAliases.ps1"
+$scriptContent | Out-File -FilePath $scriptPath -Encoding UTF8
+2. Change the ExecutionPolicy:
+
+powershell
+# Change execution policy for the current user
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
+# Verify
+Get-ExecutionPolicy -Scope CurrentUser
+3. Run the script:
+
+powershell
+# Execute directly
+& "$env:USERPROFILE\Documents\Set-LinuxAliases.ps1"
+
+# Or
+.\Documents\Set-LinuxAliases.ps1
